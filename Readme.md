@@ -4,17 +4,17 @@
 
 This flattens your Solidity contracts by recursively resolving your dependencies and merging them into your contract file. Dependencies won't be included twice. Pragma statements are reduced to one and aligned and the newest version.
 
-## Why?
+### Why?
 
 To verify your contracts over at [Etherscan](https://etherscan.io/verifyContract) or play around with it in the [remix IDE](https://remix.ethereum.org/).
 
-## Install!
+### Install!
 
 ```sh
 yarn global add solidity-steamroller
 ```
 
-## Use!
+### Use!
 
 ```sh
 steamroller path/to/my/Contract.sol
@@ -26,14 +26,14 @@ The flattened contract is printed to stdout. Just pipe it to a file if you fancy
 steamroller path/to/my/Contract.sol > Contract_flattened.sol
 ```
 
-## Contribute!
+### Contribute!
 
 If encoutering any issues please open one at [GitHub](https://github.com/JoinColony/solidity-steamroller/issues). PRs are very welcome as well.
 
-## TODO
+### TODO
 
 - Tests
 
-## License!
+### License!
 
 GPL-3.0
