@@ -3,7 +3,7 @@ const path = require('path');
 const parser = require('solidity-parser-antlr');
 const semver = require('semver');
 
-const flatten = (file, store = { imported: new Map(), pragmas: [] }, depth = 0) => {
+const flatten = (file, store = { imported: new Set(), pragmas: [] }, depth = 0) => {
   const basePath = path.dirname(file);
   let contract = fs.readFileSync(file).toString();
   const parsed = parser.parse(contract, { loc: true });
@@ -19,7 +19,7 @@ const flatten = (file, store = { imported: new Map(), pragmas: [] }, depth = 0) 
     .forEach(({ absPath, contents, loc }) => {
       contract = replaceInLoc(contract, lines, loc, !store.imported.has(absPath) ? contents : '');
       // Save the imported file for later so that we don't import it twice
-      store.imported.set(absPath, true);
+      store.imported.add(absPath);
     });
   // Save the pragma directives for later
   parsed.children
