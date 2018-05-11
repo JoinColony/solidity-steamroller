@@ -1,8 +1,8 @@
 # solidity-steamroller
 
-🚂 Flatten your Solidity contracts with ease.
+🚜 Flatten your Solidity contracts with ease.
 
-This flattens your Solidity contracts by recursively resolving your dependencies and merging them into your contract file. Dependencies won't be included twice. Pragma statements are reduced to one and aligned and the newest version.
+This flattens your Solidity contracts by recursively resolving your dependencies and merging them into your contract file. Dependencies won't be included twice. Pragma statements are reduced to one and aligned to the newest version.
 
 ### Why?
 
@@ -28,7 +28,7 @@ steamroller path/to/my/Contract.sol > Contract_flattened.sol
 
 ### Contribute!
 
-If encoutering any issues please open one at [GitHub](https://github.com/JoinColony/solidity-steamroller/issues). PRs are very welcome as well.
+If encountering any issues please open one at [GitHub](https://github.com/JoinColony/solidity-steamroller/issues). PRs are very welcome as well.
 
 ### TODO
 

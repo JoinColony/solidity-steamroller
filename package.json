@@ -1,7 +1,7 @@
 {
   "name": "solidity-steamroller",
   "version": "1.0.0",
-  "description": "🚂 Flatten your Solidity contracts with ease",
+  "description": "🚜 Flatten your Solidity contracts with ease",
   "bin": {
     "steamroller": "./bin/steamroller.js"
   },
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Christian Maniewski <chris@colony.io>",
   "license": "GPL-3.0",
   "dependencies": {
     "semver": "^5.5.0",
