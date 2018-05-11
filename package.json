@@ -1,13 +1,16 @@
 {
   "name": "solidity-steamroller",
   "version": "1.0.0",
-  "description": "",
+  "description": "🚂 Flatten your Solidity contracts with ease",
+  "bin": {
+    "steamroller": "./bin/steamroller.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "semver": "^5.5.0",
     "solidity-parser-antlr": "^0.2.10"

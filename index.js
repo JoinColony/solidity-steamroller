@@ -58,6 +58,4 @@ function findPragmaVersion(pragmas, name) {
     }, null);
 }
 
-const flattened = flatten('../colonyToken/contracts/Vesting.sol');
-
-console.log(flattened)
+module.exports = flatten;
