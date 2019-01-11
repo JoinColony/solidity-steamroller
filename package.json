@@ -13,6 +13,6 @@
   "license": "GPL-3.0",
   "dependencies": {
     "semver": "^5.5.0",
-    "solidity-parser-antlr": "^0.2.10"
+    "solidity-parser-antlr": "^0.3.3"
   }
 }
