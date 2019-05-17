@@ -30,10 +30,13 @@ const flatten = (file, store = { imported: new Set(), pragmas: [] }, depth = 0) 
     });
   if (depth === 0) {
     const solidityPragma = findPragmaVersion(store.pragmas, 'solidity');
-    const experimentalPragma = findPragmaVersion(store.pragmas, 'experimental');
-    if (experimentalPragma) {
-      contract = `pragma experimental "v${experimentalPragma}";\n${contract}`;
-    }
+    const experimentalPragmas = findExperimentalPragmas(store.pragmas, 'experimental');
+
+    experimentalPragmas.forEach(
+      pragma => {
+        contract = `pragma experimental ${pragma};\n${contract}`;
+      }
+    );
     if (solidityPragma) {
       contract = `pragma solidity ^${solidityPragma};\n${contract}`;
     }
@@ -56,6 +59,15 @@ function findPragmaVersion(pragmas, name) {
       if (!current) return next;
       return semver.gt(current, next) ? current : next;
     }, null);
+}
+
+function findExperimentalPragmas(pragmas) {
+    return Array.from(
+      new Set(pragmas
+        .filter(pragma => pragma.name === 'experimental')
+        .map(pragma => pragma.value)
+      )
+    );
 }
 
 module.exports = flatten;
