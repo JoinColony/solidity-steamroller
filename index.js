@@ -30,7 +30,7 @@ const flatten = (file, store = { imported: new Set(), pragmas: [] }, depth = 0) 
     });
   if (depth === 0) {
     const solidityPragma = findPragmaVersion(store.pragmas, 'solidity');
-    const experimentalPragmas = findExperimentalPragmas(store.pragmas, 'experimental');
+    const experimentalPragmas = findExperimentalPragmas(store.pragmas);
 
     experimentalPragmas.forEach(
       pragma => {
