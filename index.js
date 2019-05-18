@@ -65,7 +65,7 @@ function findExperimentalPragmas(pragmas) {
     return Array.from(
       new Set(pragmas
         .filter(pragma => pragma.name === 'experimental')
-        .map(pragma => pragma.value)
+        .map(pragma => pragma.value.replace(/("|')/g, ''))
       )
     );
 }
