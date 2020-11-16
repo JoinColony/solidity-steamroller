@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const parser = require('solidity-parser-antlr');
+const parser = require('solidity-parser-diligence');
 const semver = require('semver');
 
 const flatten = (file, store = { imported: new Set(), pragmas: [] }, depth = 0) => {
